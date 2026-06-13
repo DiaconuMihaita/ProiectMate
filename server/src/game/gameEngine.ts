@@ -3,11 +3,12 @@ import type {
   ClientToServerEvents,
   MatchState,
   ServerToClientEvents
-} from "@mathquiztador/shared";
+} from "../../../shared/dist/index.js";
 import { randomUUID } from "node:crypto";
 import { createGameMap } from "./mapFactory.js";
 import type { ConnectedPlayer, LobbyInternal, MatchInternal } from "./types.js";
-import { toLobbyPublic, toPlayerPublic } from "./types.js";
+import { toLobbyPublic } from "./types.js";
+import { toPlayerPublic } from "./playerPublic.js";
 import { generateQuestion, isCorrectAnswer } from "../services/questionGenerator.js";
 import type { Server } from "socket.io";
 

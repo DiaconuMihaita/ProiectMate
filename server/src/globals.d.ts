@@ -52,4 +52,12 @@ declare module "node:crypto" {
 	export function randomUUID(): string;
 }
 
+interface String {
+	at(index: number): string | undefined;
+}
+
+interface Array<T> {
+	at(index: number): T | undefined;
+}
+
 declare const process: any;

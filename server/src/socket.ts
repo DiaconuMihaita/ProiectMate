@@ -1,5 +1,5 @@
 import { Server } from "socket.io";
-import type { ClientToServerEvents, ServerToClientEvents } from "@mathquiztador/shared";
+import type { ClientToServerEvents, ServerToClientEvents } from "../../shared/dist/index.js";
 import { verifyToken } from "./auth.js";
 import { UserModel } from "./models/User.js";
 import { GameEngine } from "./game/gameEngine.js";

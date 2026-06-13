@@ -1,4 +1,5 @@
-import type { Difficulty, LobbyState, MatchState, PlayerPublic } from "@mathquiztador/shared";
+import type { Difficulty, LobbyState, MatchState } from "../../../shared/dist/index.js";
+import { toPlayerPublic } from "./playerPublic.js";
 
 export interface ConnectedPlayer {
   userId: string;
@@ -42,19 +43,3 @@ export function toLobbyPublic(lobby: LobbyInternal): LobbyState {
   };
 }
 
-export function toPlayerPublic(player: ConnectedPlayer): PlayerPublic {
-  const colors = ["#22d3ee", "#f59e0b", "#ef4444", "#a3e635"];
-  const idx = Number(player.userId.at(-1) ?? "0") % colors.length;
-
-  return {
-    userId: player.userId,
-    username: player.username,
-    color: colors[idx]!,
-    score: 0,
-    xp: player.xp,
-    rating: player.rating,
-    wins: player.wins,
-    losses: player.losses,
-    accuracy: player.accuracy
-  };
-}

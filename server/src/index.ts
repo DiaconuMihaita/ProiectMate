@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import { createServer } from "http";
 import { Server } from "socket.io";
-import type { ClientToServerEvents, ServerToClientEvents } from "@mathquiztador/shared";
+import type { ClientToServerEvents, ServerToClientEvents } from "../../shared/dist/index.js";
 import { config } from "./config.js";
 import { connectDb } from "./db.js";
 import { authRouter } from "./routes/auth.js";

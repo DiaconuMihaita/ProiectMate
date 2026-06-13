@@ -15,6 +15,6 @@ const UserSchema = new Schema(
   { timestamps: true }
 );
 
-export type UserDoc = InferSchemaType<typeof UserSchema> & { _id: mongoose.Types.ObjectId };
+export type UserDoc = InferSchemaType<typeof UserSchema> & { _id: string };
 
 export const UserModel = mongoose.models.User || mongoose.model("User", UserSchema);

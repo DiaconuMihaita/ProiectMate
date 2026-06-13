@@ -1,4 +1,4 @@
-import type { Difficulty, Question, QuestionType, Topic } from "@mathquiztador/shared";
+import type { Difficulty, Question, QuestionType, Topic } from "../../../shared/dist/index.js";
 import { randomUUID } from "node:crypto";
 
 function randInt(min: number, max: number) {

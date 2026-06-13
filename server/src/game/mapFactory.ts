@@ -1,4 +1,4 @@
-import type { GameMap, PlayerPublic } from "@mathquiztador/shared";
+import type { GameMap, PlayerPublic } from "../../../shared/dist/index.js";
 
 const coordinates = [
   [10, 20],

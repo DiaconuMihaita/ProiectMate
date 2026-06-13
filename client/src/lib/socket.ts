@@ -1,5 +1,5 @@
 import { io, type Socket } from "socket.io-client";
-import type { ClientToServerEvents, ServerToClientEvents } from "@mathquiztador/shared";
+import type { ClientToServerEvents, ServerToClientEvents } from "../../../shared/dist/index.js";
 
 export function createSocket(token: string): Socket<ServerToClientEvents, ClientToServerEvents> {
   return io(import.meta.env.VITE_SOCKET_URL ?? "http://localhost:4000", {

@@ -7,12 +7,12 @@ import type {
   MatchState,
   PlayerPublic,
   Territory
-} from "../../shared/dist/index.js";
+} from "../../shared/src/index.ts";
 import { login, register } from "./lib/api";
 import type { AuthResponse } from "./lib/api";
 import { createSocket } from "./lib/socket";
 import type { Socket } from "socket.io-client";
-import type { ClientToServerEvents, ServerToClientEvents } from "../../shared/dist/index.js";
+import type { ClientToServerEvents, ServerToClientEvents } from "../../shared/src/index.ts";
 
 function cardClass(extra = "") {
   return `glass rounded-2xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.35)] ${extra}`;

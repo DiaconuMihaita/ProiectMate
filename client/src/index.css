@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: Manrope, sans-serif;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(33, 212, 253, 0.15), transparent 30%),
+    radial-gradient(circle at 90% 30%, rgba(255, 154, 68, 0.17), transparent 32%),
+    linear-gradient(165deg, #090f1d, #111c34 42%, #0a1328 100%);
+}
+
+.glass {
+  background: rgba(12, 20, 39, 0.74);
+  border: 1px solid rgba(151, 166, 197, 0.22);
+  backdrop-filter: blur(8px);
+}
+
+.territory {
+  transition: transform 180ms ease, filter 220ms ease;
+}
+
+.territory:hover {
+  transform: scale(1.06);
+  filter: brightness(1.2);
+}
